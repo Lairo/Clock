@@ -1,44 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="Clock.MainPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Clock.Models"
+             x:Class="Clock.MainPage">
 
-    <ScrollView>
-        <HorizontalStackLayout
+<ScrollView>
+    <HorizontalStackLayout
             Padding="30,0"
             Spacing="5">
-            
-            <FlexLayout x:Name="Settings" Wrap="Wrap" MaximumWidthRequest="70">
-<!--True
-Flase-->
+
+
+        <VerticalStackLayout >
+
+
+                <Label 
+                    x:Name="lbl1"
+                    FontFamily="FaBrands"
+                    Text="{x:Static models:FaBrandsIcons.AmazonPay}"
+                />
+                
                 <Button
                     x:Name="Menu"
-                    Text="Menu" 
-                    Clicked="Menu_Clicked"
+                    FontFamily="FaBrands"
+                    Text="{x:Static models:FaBrandsIcons.AmazonPay}" 
+                    Clicked="Menu_Clicked"              
                     HorizontalOptions="Center"    
                     FontSize="Small" 
-                    IsVisible="True"
-                    />
+                    IsVisible="True"/>
+            
                 <Button
                     x:Name="Controls"
                     Text="Controls" 
                     Clicked="Controls_Clicked"
                     HorizontalOptions="Fill"    
                     FontSize="Small"
-                    IsVisible="True"
-                    />
+                    IsVisible="True"/>
+            
                 <Button
                     x:Name="ColorBtn"
                     Text="Color" 
                     Clicked="ColorBtn_Clicked"  
                     HorizontalOptions="Fill"    
                     FontSize="Small"
-                    IsVisible="True"
-                    />
+                    IsVisible="True"/>
 
-            </FlexLayout>
+        </VerticalStackLayout>
 
-            <Button
+        <Button
                 x:Name="Clock"
                 Text="Clock" 
                 Clicked="Clock_Clicked"
@@ -47,8 +55,9 @@ Flase-->
                 FontSize="Large"
                 TextColor="Lime"
                 Background="Transparent"
-                />
-        </HorizontalStackLayout>
-    </ScrollView>
+            />
+    </HorizontalStackLayout>
+</ScrollView>
+
 
 </ContentPage>
