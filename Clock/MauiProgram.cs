@@ -13,8 +13,7 @@ namespace Clock
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                    fonts.AddFont("SegMDL2.ttf", "SegoeMDL2Assets");
-                    fonts.AddFont("fa-brands-400.ttf", "FaBrands");
+                    fonts.AddFont("SegMDL2.ttf", "SegoeMDL2Assets");                    
                     fonts.AddFont("fa-regular-400.ttf", "FaRegular");
                     fonts.AddFont("fa-solid-900.ttf", "FaSolid");
                 });

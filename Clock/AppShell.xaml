@@ -8,8 +8,9 @@
     Title="Clock">
 
     <ShellContent
-        
+         
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage"
+        />
 
 </Shell>

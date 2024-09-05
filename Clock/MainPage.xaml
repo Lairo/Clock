@@ -2,62 +2,81 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:Clock.Models"
-             x:Class="Clock.MainPage">
+             x:Class="Clock.MainPage" HeightRequest="320" WidthRequest="480" >
 
-<ScrollView>
-    <HorizontalStackLayout
-            Padding="30,0"
-            Spacing="5">
-
-
-        <VerticalStackLayout >
+    <ScrollView >
+        <HorizontalStackLayout
+                Padding="30,0"
+                Spacing="0">
 
 
-                <Label 
-                    x:Name="lbl1"
-                    FontFamily="FaBrands"
-                    Text="{x:Static models:FaBrandsIcons.AmazonPay}"
-                />
+            <VerticalStackLayout Spacing="5" Padding="0,0,0,20">
+
+                <Button
+                        x:Name="Menu"
+                        FontFamily="SegoeMDL2Assets"
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon3}" 
+                        Clicked="Menu_Clicked"              
+                        HorizontalOptions="Center"    
+                        FontSize="Large" 
+                        IsVisible="True"/>
                 
+                <!--alternative settings iconText="{x:Static models:SegoeMDL2AssetsIcons.Icon7}"-->
                 <Button
-                    x:Name="Menu"
-                    FontFamily="FaBrands"
-                    Text="{x:Static models:FaBrandsIcons.AmazonPay}" 
-                    Clicked="Menu_Clicked"              
-                    HorizontalOptions="Center"    
-                    FontSize="Small" 
-                    IsVisible="True"/>
-            
+                        x:Name="Controls"
+                        FontFamily="SegoeMDL2Assets"
+                        
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon424}"
+                        Clicked="Controls_Clicked"
+                        HorizontalOptions="Fill"    
+                        FontSize="Large"
+                        IsVisible="True"/>
+                
+                <!--alternative color iconText="{x:Static models:SegoeMDL2AssetsIcons.Icon241}"-->
                 <Button
-                    x:Name="Controls"
-                    Text="Controls" 
-                    Clicked="Controls_Clicked"
-                    HorizontalOptions="Fill"    
-                    FontSize="Small"
-                    IsVisible="True"/>
-            
-                <Button
-                    x:Name="ColorBtn"
-                    Text="Color" 
-                    Clicked="ColorBtn_Clicked"  
-                    HorizontalOptions="Fill"    
-                    FontSize="Small"
-                    IsVisible="True"/>
+                        x:Name="ColorBtn"
+                        FontFamily="SegoeMDL2Assets"
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon976}"
+                        Clicked="ColorBtn_Clicked"  
+                        HorizontalOptions="Fill"    
+                        FontSize="Large"
+                        IsVisible="True"/>
 
-        </VerticalStackLayout>
+                <!--FontFamily="SegoeMDL2Assets"
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon726"} nera palcas
+                        FontFamily="SegoeMDL2Assets"
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon727"} palcas
+                        FontFamily="SegoeMDL2Assets"
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon793"} nera palcas
+                        FontFamily="SegoeMDL2Assets"
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon791"} palcas
+                
+                        FontFamily="SegoeMDL2Assets"
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon876"} savlucia
+                        FontFamily="SegoeMDL2Assets"
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon1021"} susiau-savlucia
+                
+                        FontFamily="SegoeMDL2Assets"
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon1022"} arrow left
+                        FontFamily="SegoeMDL2Assets"
+                        Text="{x:Static models:SegoeMDL2AssetsIcons.Icon1042"} arrow left thin-->
+            
+                        
 
-        <Button
+            </VerticalStackLayout>
+
+            <Button
                 x:Name="Clock"
                 Text="Clock" 
-                Clicked="Clock_Clicked"
-                HorizontalOptions="Fill"
-                VerticalOptions="Fill"
+                Clicked="Clock_Clicked"                                       
                 FontSize="Large"
                 TextColor="Lime"
                 Background="Transparent"
-            />
-    </HorizontalStackLayout>
-</ScrollView>
+                MinimumHeightRequest="300"
+                MinimumWidthRequest="300"
+                />
+        </HorizontalStackLayout>
+    </ScrollView>
 
 
 </ContentPage>
